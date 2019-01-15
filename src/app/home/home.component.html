@@ -1,5 +1,5 @@
 <div class="fill-container" fxLayout="column">
-  <mat-toolbar color="primary"> <span>The Cookie Jar</span> </mat-toolbar>
+  <mat-toolbar class="header" color="primary"> <span>The Cookie Jar</span> </mat-toolbar>
   <div fxLayout="column" fxFlex>
     <div fxLayout="row" fxLayoutAlign="center">
       <div>
@@ -20,9 +20,11 @@
           Login
         </button>
       </a>
-      <button mat-raised-button color="accent">
-        Become a Cookie
-      </button>
+      <a routerLink="/create-account">
+        <button class="create-account-button" mat-raised-button color="accent">
+          Become a Cookie
+        </button>
+      </a>
     </div>
 
     <div class="mg-sm" fxLayout="column" fxFlex fxLayoutAlign="flex-end">
