@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { FlexLayoutModule } from '@angular/flex-layout';
 import {
   MatButtonModule,
   MatInputModule,
@@ -25,7 +26,8 @@ import {
     MatToolbarModule,
     MatIconModule,
     MatTableModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    FlexLayoutModule,
   ],
   exports: [
     MatButtonModule,
@@ -37,7 +39,8 @@ import {
     MatToolbarModule,
     MatIconModule,
     MatTableModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    FlexLayoutModule
   ],
   providers: [],
   bootstrap: []
