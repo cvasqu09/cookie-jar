@@ -9,7 +9,7 @@ import { ConversationComponent } from './conversation/conversation.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { CreateAccountComponent } from './create-account/create-account.component';
-import { ContactComponent } from './contact/contact.component';
+import { ContactsComponent } from './contacts/contacts.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +18,7 @@ import { ContactComponent } from './contact/contact.component';
     ConversationComponent,
     LoginComponent,
     CreateAccountComponent,
-    ContactComponent
+    ContactsComponent
   ],
   imports: [
     MaterialModule,
