@@ -15,4 +15,12 @@ export class ConversationComponent implements OnInit {
   ngOnInit() {
     this.contacts = this.contactService.getContacts();
   }
+
+  onSelectedContact(contact: Contact) {
+    console.log('Received: ' + contact);
+  }
+
+  toggle() {
+
+  }
 }

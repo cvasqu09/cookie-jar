@@ -1,5 +1,5 @@
 <mat-list>
-  <mat-list-item color="primary" *ngFor="let contact of contacts">
+  <mat-list-item *ngFor="let contact of contacts; let i = index" (click)="selectedContact(i)">
     <img matListAvatar src="../../assets/icons/monkey.png">
     <h3 matLine>{{ contact.getName() }}</h3>
     <p matLine>
