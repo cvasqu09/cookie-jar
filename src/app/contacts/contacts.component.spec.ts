@@ -1,6 +1,10 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ContactsComponent } from './contacts.component';
+import { By } from '@angular/platform-browser';
+import { MatListModule, MatToolbarModule } from '@angular/material';
+import { MockContactService } from '../../shared/mocks/mock-contact.service';
+import { ContactService } from '../../shared/services/contact.service';
 
 describe('ContactComponent', () => {
   let component: ContactsComponent;
@@ -8,7 +12,9 @@ describe('ContactComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ContactsComponent ]
+      declarations: [ ContactsComponent ],
+      imports: [MatListModule, MatToolbarModule],
+      providers: [{provide: ContactService, useClass: MockContactService}]
     })
     .compileComponents();
   }));
@@ -21,5 +27,10 @@ describe('ContactComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should emit contact when contact is clicked', () => {
+    // const listItems = fixture.debugElement.query(By.css('mat-list-item'));
+    // debugger;
   });
 });

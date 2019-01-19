@@ -9,6 +9,9 @@ import { Router } from '@angular/router';
 import { LoginComponent } from '../login/login.component';
 import { ConversationComponent } from '../conversation/conversation.component';
 import { CreateAccountComponent } from '../create-account/create-account.component';
+import { AppModule } from '../app.module';
+import { MaterialModule } from '../../shared/material.module';
+import { ContactsComponent } from '../contacts/contacts.component';
 
 describe('HomeComponent', () => {
   let component: HomeComponent;
@@ -21,8 +24,8 @@ describe('HomeComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ HomeComponent, LoginComponent, ConversationComponent, CreateAccountComponent],
-      imports: [MatToolbarModule, MatButtonModule, RouterTestingModule.withRoutes(routes)]
+      declarations: [ HomeComponent, LoginComponent, ConversationComponent, CreateAccountComponent, ContactsComponent],
+      imports: [MaterialModule, RouterTestingModule.withRoutes(routes)]
     })
     .compileComponents();
   }));
