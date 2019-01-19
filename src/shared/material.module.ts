@@ -11,7 +11,9 @@ import {
   MatDividerModule,
   MatIconModule,
   MatTableModule,
-  MatPaginatorModule
+  MatPaginatorModule,
+  MatSidenavContainer,
+  MatSidenavModule
 } from '@angular/material';
 
 @NgModule({
@@ -27,6 +29,7 @@ import {
     MatIconModule,
     MatTableModule,
     MatPaginatorModule,
+    MatSidenavModule,
     FlexLayoutModule,
   ],
   exports: [
@@ -40,6 +43,7 @@ import {
     MatIconModule,
     MatTableModule,
     MatPaginatorModule,
+    MatSidenavModule,
     FlexLayoutModule
   ],
   providers: [],
