@@ -1,10 +1,9 @@
 <mat-toolbar class="header" color="primary"> <span>The Cookie Jar</span> </mat-toolbar>
-<button mat-raised-button (click)="sidenav.toggle()">Action</button>
-<mat-sidenav-container>
+<mat-sidenav-container class="cream">
   <mat-sidenav-content>
     <app-contacts (selectContact)="onSelectedContact($event)"></app-contacts>
   </mat-sidenav-content>
   <mat-sidenav #sidenav mode="side" position="end">
-    <p>Sidenave</p>
+    <p>{{ selectedContact ? selectedContact.getName() : "No conversation selected" }}</p>
   </mat-sidenav>
 </mat-sidenav-container>

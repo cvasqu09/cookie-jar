@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { ContactService } from '../../shared/services/contact.service';
 import { Contact } from '../../shared/models/contact.model';
 
@@ -9,6 +9,8 @@ import { Contact } from '../../shared/models/contact.model';
 })
 export class ConversationComponent implements OnInit {
   contacts: Contact[];
+  @ViewChild('sidenav') sidenav;
+  selectedContact: Contact;
 
   constructor(private contactService: ContactService) { }
 
@@ -18,9 +20,7 @@ export class ConversationComponent implements OnInit {
 
   onSelectedContact(contact: Contact) {
     console.log('Received: ' + contact);
-  }
-
-  toggle() {
-
+    this.selectedContact = contact;
+    this.sidenav.toggle();
   }
 }

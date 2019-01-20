@@ -1,9 +1,10 @@
-<mat-list>
-  <mat-list-item *ngFor="let contact of contacts; let i = index" (click)="selectedContact(i)">
+<mat-list class="cream">
+  <mat-list-item class="cream" *ngFor="let contact of contacts; let i = index" (click)="selectedContact(i)">
     <img matListAvatar src="../../assets/icons/monkey.png">
     <h3 matLine>{{ contact.getName() }}</h3>
     <p matLine>
       {{ contact.getPhone() }}
     </p>
+    <mat-divider></mat-divider>
   </mat-list-item>
 </mat-list>
