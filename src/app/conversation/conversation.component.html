@@ -4,6 +4,6 @@
     <app-contacts (selectContact)="onSelectedContact($event)"></app-contacts>
   </mat-sidenav-content>
   <mat-sidenav #sidenav mode="side" position="end">
-    <p>{{ selectedContact ? selectedContact.getName() : "No conversation selected" }}</p>
+    <app-messaging [messages]="contactMessages"></app-messaging>
   </mat-sidenav>
 </mat-sidenav-container>

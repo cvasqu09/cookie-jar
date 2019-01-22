@@ -1,6 +1,6 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import { ContactService } from '../../shared/services/contact.service';
-import { Contact } from '../../shared/models/contact.model';
+import { ContactService } from '../shared/services/contact.service';
+import { Contact } from '../shared/models/contact.model';
 
 @Component({
   selector: 'app-contacts',

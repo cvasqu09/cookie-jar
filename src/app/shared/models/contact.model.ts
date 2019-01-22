@@ -1,8 +1,8 @@
 export class Contact {
-  constructor(private name: string, private email: string, private phone: string) {}
+  constructor(private userId: string, private email: string, private phone: string) {}
 
-  getName(): string {
-    return this.name;
+  getId(): string {
+    return this.userId;
   }
 
   getEmail(): string {

@@ -3,8 +3,8 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { ContactsComponent } from './contacts.component';
 import { By } from '@angular/platform-browser';
 import { MatListModule, MatToolbarModule } from '@angular/material';
-import { MockContactService } from '../../shared/mocks/mock-contact.service';
-import { ContactService } from '../../shared/services/contact.service';
+import { MockContactService } from '../shared/mocks/mock-contact.service';
+import { ContactService } from '../shared/services/contact.service';
 
 describe('ContactComponent', () => {
   let component: ContactsComponent;

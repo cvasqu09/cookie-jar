@@ -10,7 +10,7 @@ import { LoginComponent } from '../login/login.component';
 import { ConversationComponent } from '../conversation/conversation.component';
 import { CreateAccountComponent } from '../create-account/create-account.component';
 import { AppModule } from '../app.module';
-import { MaterialModule } from '../../shared/material.module';
+import { MaterialModule } from '../shared/material.module';
 import { ContactsComponent } from '../contacts/contacts.component';
 
 describe('HomeComponent', () => {

@@ -10,9 +10,9 @@ export class MockContactService implements ContactService {
 
   getContacts(): Contact[] {
     const contacts: Contact[] = [
-      new Contact('Billy Bob', 'billybob@test.com', '123456789'),
-      new Contact('Karen', 'karen@test.com', '123456789'),
-      new Contact('Chris', 'chris@test.com', '123456789'),
+      new Contact('1, Billy Bob', 'billybob@test.com', '123456789'),
+      new Contact('2, Karen', 'karen@test.com', '123456789'),
+      new Contact('3, Chris', 'chris@test.com', '123456789'),
     ];
 
     return contacts;
