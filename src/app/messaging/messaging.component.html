@@ -1,3 +1,4 @@
-<p *ngFor="let message of messages">
-  {{ message.getContent() }}
-</p>
+<mat-list>
+  <app-message *ngFor="let message of messages" [message]="message"></app-message>
+  <mat-divider></mat-divider>
+</mat-list>

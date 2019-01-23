@@ -8,7 +8,7 @@ export class Message {
     return this.content;
   }
 
-  get timestamp(): string {
+  getTimestamp(): string {
     return this._timestamp;
   }
 }

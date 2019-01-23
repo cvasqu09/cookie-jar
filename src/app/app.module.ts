@@ -11,6 +11,7 @@ import { LoginComponent } from './login/login.component';
 import { CreateAccountComponent } from './create-account/create-account.component';
 import { ContactsComponent } from './contacts/contacts.component';
 import { MessagingComponent } from './messaging/messaging.component';
+import { MessageComponent } from './message/message.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { MessagingComponent } from './messaging/messaging.component';
     LoginComponent,
     CreateAccountComponent,
     ContactsComponent,
-    MessagingComponent
+    MessagingComponent,
+    MessageComponent
   ],
   imports: [
     MaterialModule,
