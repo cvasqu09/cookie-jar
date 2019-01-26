@@ -1,12 +1,13 @@
 import { Injectable } from '@angular/core';
-import { Apollo } from 'apollo-angular';
+import { Apollo, Query } from 'apollo-angular';
 import { Contact } from '../models/contact.model';
 import gql from 'graphql-tag';
 
 const GetContactsQuery = gql`
   query getAllContacts($id: String!) {
     getContacts(id: $id) {
-      name
+      name,
+      email
     }
   }
 `;
@@ -20,14 +21,9 @@ export class ContactService {
   constructor(private apollo: Apollo) { }
 
   getContacts(id: string): any {
-    this.apollo.watchQuery({
-      query: gql`
-        {
-          getContacts(id: "2") {
-            name
-          }
-        }
-      `
+    this.apollo.watchQuery<Query>({
+      query: GetContactsQuery,
+      variables: { id }
     })
     .valueChanges.subscribe(({data}) => {
       console.log(data);

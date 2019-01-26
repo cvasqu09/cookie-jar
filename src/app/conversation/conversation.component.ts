@@ -18,7 +18,7 @@ export class ConversationComponent implements OnInit {
   constructor(private contactService: IContactService, private messagingService: IMessagingService) { }
 
   ngOnInit() {
-    this.contacts = this.contactService.getContacts();
+    this.contacts = this.contactService.getContacts('2');
   }
 
   onSelectedContact(contact: Contact) {
