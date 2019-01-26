@@ -12,6 +12,8 @@ import { CreateAccountComponent } from './create-account/create-account.componen
 import { ContactsComponent } from './contacts/contacts.component';
 import { MessagingComponent } from './messaging/messaging.component';
 import { MessageComponent } from './message/message.component';
+import { GraphQLModule } from './graphql.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { MessageComponent } from './message/message.component';
     MaterialModule,
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    GraphQLModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

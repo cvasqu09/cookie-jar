@@ -4,7 +4,7 @@ import { ContactsComponent } from './contacts.component';
 import { By } from '@angular/platform-browser';
 import { MatListModule, MatToolbarModule } from '@angular/material';
 import { MockContactService } from '../shared/mocks/mock-contact.service';
-import { ContactService } from '../shared/services/contact.service';
+import { IContactService } from '../shared/interfaces/IContactService';
 
 describe('ContactComponent', () => {
   let component: ContactsComponent;
@@ -14,7 +14,7 @@ describe('ContactComponent', () => {
     TestBed.configureTestingModule({
       declarations: [ ContactsComponent ],
       imports: [MatListModule, MatToolbarModule],
-      providers: [{provide: ContactService, useClass: MockContactService}]
+      providers: [{provide: IContactService, useClass: MockContactService}]
     })
     .compileComponents();
   }));
@@ -29,7 +29,7 @@ describe('ContactComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should emit contact when contact is clicked', () => {
+  it('should emit contact.ts when contact.ts is clicked', () => {
     // const listItems = fixture.debugElement.query(By.css('mat-list-item'));
     // debugger;
   });

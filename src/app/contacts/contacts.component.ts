@@ -1,5 +1,5 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import { ContactService } from '../shared/services/contact.service';
+import { IContactService } from '../shared/interfaces/IContactService';
 import { Contact } from '../shared/models/contact.model';
 
 @Component({
@@ -12,7 +12,7 @@ export class ContactsComponent implements OnInit {
   contacts: Contact[];
 
 
-  constructor(private contactService: ContactService) { }
+  constructor(private contactService: IContactService) { }
 
   ngOnInit() {
     this.contacts = this.contactService.getContacts();

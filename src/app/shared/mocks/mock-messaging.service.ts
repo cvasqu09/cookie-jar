@@ -1,11 +1,11 @@
 import { Injectable } from '@angular/core';
-import { MessagingService } from '../services/messaging.service';
+import { IMessagingService } from '../interfaces/IMessagingService';
 import { Message } from '../models/message.model';
 
 @Injectable({
   providedIn: 'root'
 })
-export class MockMessagingService implements MessagingService {
+export class MockMessagingService implements IMessagingService {
 
   constructor() {
   }

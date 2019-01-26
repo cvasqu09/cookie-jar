@@ -1,11 +1,11 @@
 import { Injectable } from '@angular/core';
-import { ContactService } from '../services/contact.service';
+import { IContactService } from '../interfaces/IContactService';
 import { Contact } from '../models/contact.model';
 
 @Injectable({
   providedIn: 'root'
 })
-export class MockContactService implements ContactService {
+export class MockContactService implements IContactService {
   constructor() { }
 
   getContacts(): Contact[] {

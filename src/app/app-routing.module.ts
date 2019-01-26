@@ -4,10 +4,11 @@ import { ConversationComponent } from './conversation/conversation.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { CreateAccountComponent } from './create-account/create-account.component';
-import { ContactService } from './shared/services/contact.service';
+import { IContactService } from './shared/interfaces/IContactService';
 import { MockContactService } from './shared/mocks/mock-contact.service';
-import { MessagingService } from './shared/services/messaging.service';
+import { IMessagingService } from './shared/interfaces/IMessagingService';
 import { MockMessagingService } from './shared/mocks/mock-messaging.service';
+import { ContactService } from './shared/services/contact.service';
 
 export const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -21,8 +22,8 @@ export const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
   providers: [
-    {provide: ContactService, useClass: MockContactService},
-    {provide: MessagingService, useClass: MockMessagingService}
+    {provide: IContactService, useClass: ContactService},
+    {provide: IMessagingService, useClass: MockMessagingService}
   ],
 })
 export class AppRoutingModule { }

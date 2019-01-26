@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { ContactService } from '../shared/services/contact.service';
+import { IContactService } from '../shared/interfaces/IContactService';
 import { Contact } from '../shared/models/contact.model';
-import { MessagingService } from '../shared/services/messaging.service';
+import { IMessagingService } from '../shared/interfaces/IMessagingService';
 import { Message } from '../shared/models/message.model';
 
 @Component({
@@ -15,7 +15,7 @@ export class ConversationComponent implements OnInit {
   selectedContact: Contact;
   contactMessages: Message[];
 
-  constructor(private contactService: ContactService, private messagingService: MessagingService) { }
+  constructor(private contactService: IContactService, private messagingService: IMessagingService) { }
 
   ngOnInit() {
     this.contacts = this.contactService.getContacts();
