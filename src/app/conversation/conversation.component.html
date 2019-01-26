@@ -1,3 +1,9 @@
-<p>
-  conversation works!
-</p>
+<mat-toolbar class="header" color="primary"> <span>The Cookie Jar</span> </mat-toolbar>
+<mat-sidenav-container class="cream">
+  <mat-sidenav-content>
+    <app-contacts (selectContact)="onSelectedContact($event)"></app-contacts>
+  </mat-sidenav-content>
+  <mat-sidenav #sidenav mode="side" position="end">
+    <app-messaging [messages]="contactMessages"></app-messaging>
+  </mat-sidenav>
+</mat-sidenav-container>

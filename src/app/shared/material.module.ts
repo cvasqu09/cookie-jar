@@ -11,8 +11,11 @@ import {
   MatDividerModule,
   MatIconModule,
   MatTableModule,
-  MatPaginatorModule
+  MatPaginatorModule,
+  MatSidenavContainer,
+  MatSidenavModule
 } from '@angular/material';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [],
@@ -27,6 +30,8 @@ import {
     MatIconModule,
     MatTableModule,
     MatPaginatorModule,
+    MatSidenavModule,
+    BrowserAnimationsModule,
     FlexLayoutModule,
   ],
   exports: [
@@ -40,6 +45,8 @@ import {
     MatIconModule,
     MatTableModule,
     MatPaginatorModule,
+    MatSidenavModule,
+    BrowserAnimationsModule,
     FlexLayoutModule
   ],
   providers: [],
