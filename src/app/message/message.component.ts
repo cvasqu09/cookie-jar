@@ -13,12 +13,7 @@ export class MessageComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    const userId = localStorage.getItem('user_id');
-    if (userId) {
-      this.myMsg = this.message.getName().includes(userId);
-    } else {
-      this.myMsg = false;
-    }
+    this.myMsg = this.message.fromMe();
   }
 
   determineSide(): string {

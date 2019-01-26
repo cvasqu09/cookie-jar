@@ -1,8 +1,5 @@
 export class Message {
-  constructor(private name: string, private content: string, private _timestamp: string) {}
-  getName(): string {
-    return this.name;
-  }
+  constructor(private content: string, private _timestamp: string, private me: boolean) {}
 
   getContent(): string {
     return this.content;
@@ -10,5 +7,9 @@ export class Message {
 
   getTimestamp(): string {
     return this._timestamp;
+  }
+
+  fromMe(): boolean {
+    return this.me;
   }
 }
